@@ -1,3 +1,4 @@
+require "pry"
 
 class Author
     attr_accessor :name
@@ -7,7 +8,7 @@ class Author
     end
 
     def posts
-        Post.all.select {|post| post.author = self}
+        Post.all.select {|post| post.author == self}
     end
 
     def add_post (post)

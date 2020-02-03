@@ -17,16 +17,16 @@ attr_accessor :name
         end 
     end
 
-    def add_song(song)
+    def add_song(song) #associates a song with an artist
         song.artist = self
     end
 
    def add_song_by_name(song_name)
         song = Song.new(song_name) #creates a new song instance
-        song.artist = self
+        song.artist = self #associates the song with an artist
     end
 
     def self.song_count
-        Song.all.count #.count returns the number of elements
+        Song.all.count #class method that returns the total number of songs associated to artists
     end
 end 
